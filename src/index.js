@@ -1,31 +1,42 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./views/App";
 import { store } from "./app/store";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 
 import Nav from "./components/Nav";
 import Routes from "./components/Routes";
 
-import { HashRouter, Switch, Route, Link } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+
+import { selectStyle } from "./redux/style/styleSlice";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <HashRouter>
-        <div className="top">
-          <Nav />
-          <main>
-            <Routes/>
-          </main>
-        </div>
+        <Main />
       </HashRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+function Main() {
+  const theme = useSelector(selectStyle);
+  return (
+    <div>
+      <div class="bg-image"></div>
+      <div className={theme + " top"}>
+        <Nav />
+        <main>
+          <Routes />
+        </main>
+      </div>
+    </div>
+  );
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

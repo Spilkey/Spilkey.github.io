@@ -1,0 +1,13 @@
+div.top.dark .nav {
+  background: rgba(29, 28, 28, 0.425);
+}
+
+div.top.light .nav {
+  background: rgba(177, 172, 172, 0.425);
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+

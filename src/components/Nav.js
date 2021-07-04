@@ -2,12 +2,17 @@ import React from 'react';
 
 import { Link } from "react-router-dom";
 
-// import { FontAwesomeIcon } from '@fotawesome/react-fontawesome';
+import '../styles/Nav.css';
+
+import ToggleStyle from './ToggleStyle';
 
 function Nav() {
   return (
-    <nav>
+    <nav className='nav'>
       <ul>
+        <li>
+          <ToggleStyle/>
+        </li>
         <li>
           <Link to="/"></Link>
         </li>

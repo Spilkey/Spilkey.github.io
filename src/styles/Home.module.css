@@ -1,0 +1,13 @@
+.home-top-light{
+    background: rgba(138, 174, 204, 0.425);
+}
+
+.home-top-dark{
+    background: rgba(44, 53, 53, 0.425);
+}
+
+.home {
+    height: 100%;
+    width: 100%;
+}
+
